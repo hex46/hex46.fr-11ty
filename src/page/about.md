@@ -31,7 +31,7 @@ Il ne possède aucune fonctionnalité permettant l'enregistrement de membres et 
 Le responsable de ce site est joignable via l'adresse email suivante : contact[at]hex46[.]fr.
 
 ### L'hébergeur
-[hex46.fr](/) est hébergé sur un serveur VPS d'[OVH](https://www.ovh.com)
+[hex46.fr](/) est hébergé sur un serveur VPS d'[OVH](https://www.ovh.com) sur une instance [Yunohost](https://yunohost.org).
 
 ### Les cookies
 Le site [hex46.fr](/) n'utilise aucun cookie tiers ou de traçage.  
