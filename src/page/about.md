@@ -31,10 +31,7 @@ Il ne possède aucune fonctionnalité permettant l'enregistrement de membres et 
 Le responsable de ce site est joignable via l'adresse email suivante : contact[at]hex46[.]fr.
 
 ### L'hébergeur
-[hex46.fr](/) est hébergé sur un serveur cloud de [Clever Cloud SAS](https://www.clever-cloud.com/) :
-> Clever Cloud SAS  
-> 3 rue de l'Allier  
-> 44000 Nantes, France
+[hex46.fr](/) est hébergé sur un serveur VPS d'[OVH](https://www.ovh.com)
 
 ### Les cookies
 Le site [hex46.fr](/) n'utilise aucun cookie tiers ou de traçage.  
