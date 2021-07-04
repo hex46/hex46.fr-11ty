@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="fr">
+{% include "head.njk" %}
+<body lang="{{ metadata.lang }}">
+    {% include "header.njk" %}
+    {% block main %}{% endblock %}
+    {% include "footer.njk" %}
+</body>
+</html>

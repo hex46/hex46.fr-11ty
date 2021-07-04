@@ -1,0 +1,27 @@
+{
+  "name": "hex46.fr",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clean": "npx del output",
+    "preserve": "npm run clean",
+    "prebuild": "npm run clean",
+    "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
+    "build": "ELEVENTY_ENV=dev npx eleventy",
+    "build:prod": "ELEVENTY_ENV=prod npx eleventy",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.2.6",
+    "cssnano": "^5.0.6",
+    "del-cli": "^4.0.0",
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-link-attributes": "^3.0.0",
+    "postcss": "^8.3.5"
+  }
+}

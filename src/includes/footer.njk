@@ -1,0 +1,20 @@
+<footer class="reduced-font-size useful-width text-center margin-top-footer">
+    <div class="external-links">
+        {% for link in footer.links %}
+            <a href="{{ link.url }}"
+                target="{{ link.target }}"
+                class="{{ link.class }}"
+                rel="noreferrer">
+                {% if link.img|length %}
+                    <img src="{{ link.img }}"
+                        alt="{{ link.label }}" />
+                {% else %}
+                    {{ link.label }}
+                {% endif %}
+            </a>
+        {% endfor %}
+    </div>
+    <div>
+        💻 avec 🖤 & <a href="https://www.11ty.dev/" target="_blank" rel="noreferrer">11ty.dev</a>
+    </div>
+</footer>

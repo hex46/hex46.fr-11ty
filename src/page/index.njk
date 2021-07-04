@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+{% block main %}
+<main class="home useful-width">
+    <div class="desktop-only">
+        <img src="{{ metadata.logo }}"
+            alt="Le logo du site web." 
+            class="desktop-only"
+            width="323"
+            height="258"/>
+    </div>
+    <div class="useful-width presentation flex-column">
+        <h1>
+            Bonjour,<br/> je suis <strong>Florent A.</strong>
+        </h1>
+        <p>
+            Je suis un développeur qui fait des trucs en Java & JavaScript et je teste des souris et claviers étranges.
+        </p>
+    </div>
+</main>
+{% endblock %}
