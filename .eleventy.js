@@ -10,8 +10,7 @@ module.exports = function(eleventyConfig) {
         input: "src",
         includes: "includes",
         data: "data", // default value
-        output: "output", // default value
-        posts: "posts"
+        output: "output" // default value
     }
 
     // Configuration
@@ -27,7 +26,7 @@ module.exports = function(eleventyConfig) {
 
     // Some static files
     eleventyConfig.addPassthroughCopy(`${dir.input}/.htaccess`);
-    eleventyConfig.addPassthroughCopy(`${dir.input}/.robots.txt`);
+    eleventyConfig.addPassthroughCopy(`${dir.input}/robots.txt`);
     eleventyConfig.addPassthroughCopy(`${dir.input}/img/`);
 
     // Add watcher
