@@ -1,3 +1,8 @@
+:root {
+    --text-color: #232835;
+    --background-color: #F4F4F4;
+    --visited-color: #737e9b;
+}
 
 html, body {
     height: 100vh;
@@ -7,8 +12,8 @@ html, body {
 }
 
 body {
-    background-color: #F4F4F4;
-    color: #232835;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: Inter, sans-serif;
     font-weight: 500;
     font-size: 1.5em;
@@ -29,17 +34,17 @@ li {
 }
 
 blockquote {
-    background-color: #232835;
-    color: #F4F4F4;
+    background-color: var(--text-color);
+    color: var(--background-color);
     padding: 0.5em;
 }
 
 a {
-    color: #232835;
+    color: var(--text-color);
 }
 
 a:visited {
-    color: #737e9b;
+    color: var(--visited-color);
 }
 
 .desktop-only {
@@ -107,7 +112,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-top: 3px solid #232835;
+    border-top: 3px solid var(--text-color);
 }
 
 .margin-top-footer {
@@ -148,8 +153,8 @@ footer {
     }
     
     .desktop-only {
-        display:flex;
-        align-items:center;
+        display: flex;
+        align-items: center;
     }
 
     .home {
@@ -177,5 +182,11 @@ footer {
 @media (min-width: 1200px) {
     .useful-width {
         width: 950px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .useful-width {
+        width: 1100px;
     }
 }
