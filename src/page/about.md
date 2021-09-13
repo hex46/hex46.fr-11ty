@@ -12,7 +12,7 @@ Les sources du site sont disponibles sur [GitLab](https://gitlab.com/hex46/hex46
 ### Me concernant
 
 Je m'appelle Florent, mais vous me croiserez plus souvent sous le pseudo `hex46`.  Je suis un petit développeur orienté back ayant des appétences pour Java et JavaScript (et un peu Rust & Python).  
-Mon PC personnel oscille entre [Arch](https://archlinux.org/) et [Fedora](https://getfedora.org/), mais je ne suis pas à l'abri de retomber dans le "distro-hopping". J'utilise souvent [Sway](https://swaywm.org/) ou [Gnome](https://www.gnome.org/) comme gestionnaire de fenêtres/environnement de bureau.
+Mon PC personnel est sur [Fedora](https://getfedora.org/), mais je ne suis pas à l'abri de retomber dans le "distro-hopping". J'utilise souvent [Sway](https://swaywm.org/) ou [Gnome](https://www.gnome.org/) comme gestionnaire de fenêtres/environnement de bureau.
 
 Pour me connaître, le mieux est peut-être de me contacter sur les réseaux ;).
 
