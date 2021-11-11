@@ -30,7 +30,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy(`${dir.input}/img/`);
 
     // Add watcher
-    eleventyConfig.addWatchTarget(`${dir.input}/css/`);
+    eleventyConfig.addWatchTarget(`${dir.input}/scss/`);
     eleventyConfig.addWatchTarget(`${dir.input}/js/`);
     eleventyConfig.addWatchTarget(`${dir.input}/img/`);
 

@@ -1,6 +1,7 @@
 {% extends "base.njk" %}
 {% block main %}
-<main class="useful-width reduced-font-size article">
+{% include "header.njk" %}
+<main>
     {{ content | safe }}
 </main>
 {% endblock %}
