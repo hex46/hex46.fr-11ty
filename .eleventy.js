@@ -8,7 +8,7 @@ module.exports = function(eleventyConfig) {
     // Project architecture
     const dir = {
         input: "src",
-        includes: "includes",
+        includes: "include",
         data: "data", // default value
         output: "output" // default value
     }
@@ -20,11 +20,11 @@ module.exports = function(eleventyConfig) {
         markdownTemplateEngine: 'njk'
     }
 
-    // Some constants
+    // Constants
     const environment = process.env.ELEVENTY_ENV;
     const isProd = environment === "prod";
 
-    // Some static files
+    // Static files
     eleventyConfig.addPassthroughCopy(`${dir.input}/.htaccess`);
     eleventyConfig.addPassthroughCopy(`${dir.input}/robots.txt`);
     eleventyConfig.addPassthroughCopy(`${dir.input}/img/`);
