@@ -1,0 +1,63 @@
+@mixin theme($text-color, $background-color, $link-color) {
+    background-color: $background-color;
+    color: $text-color;
+
+    a {
+        color: $link-color;
+        transition: color 200ms linear;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    footer {
+        border-top: 3px solid $text-color;
+    }
+
+    #logo-home {
+        color: $text-color;
+        text-decoration: none;
+    }
+
+    .post {
+        border-left: 15px solid $border-post-color;
+        padding-left: 1em;
+    }
+
+    .tag {
+        padding: 0.1em 0.2em;
+        color: $text-color;
+        background-color: $border-post-color;
+        border-radius: 5px;
+    }
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin sizeHW($height, $width) {
+    height: $height;
+    width: $width;    
+}
+
+@mixin container {    
+    @include sizeHW(100%, 85%);
+    margin: auto;
+
+    @media (min-width: 1400px) {
+        width: 1100px;
+    }
+}
+
+@mixin normalize-mp {
+    margin: 0;
+    padding: 0;
+}

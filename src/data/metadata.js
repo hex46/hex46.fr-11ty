@@ -1,6 +1,6 @@
 module.exports = {
     "home": "https://hex46.fr",
-    "title": "hex46.",
+    "title": "hex46 - Développeur",
     "description": "hex46 | Florent, un petit développeur.",
     "author": "hex46",
     "keywords": "hex46, florent, florent a, développeur, java, javascript",
@@ -8,7 +8,7 @@ module.exports = {
 
     "favicon": "img/logo-mini.png",
     "logo-mini": "img/logo-mini.png",
-    "logo": "img/logo.png",
+    "avatar": "img/avatar.jpg",
 
     "twitter": {
         "title": "hex46",
@@ -19,7 +19,7 @@ module.exports = {
     "og": {
         "title": "hex46",
         "description": "hex46 | Florent, un petit développeur.",
-        "image": "img/logo.png"
+        "image": "img/avatar.jpg"
     },
 
     "builtAt": new Date().toISOString()

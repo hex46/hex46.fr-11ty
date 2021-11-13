@@ -1,13 +1,20 @@
 {% extends "base.njk" %}
 {% block main %}
 <main class="home">
-    <h1>hex46</h1>
-    <div>
-        <img src="{{ metadata.logo }}"
-            alt="Le logo du site web."
-            width="375"
-            height="425"/>
+    <div class="presentation">
+        <div>
+            <h1>Bonjour, je suis Florent A.</h1>
+            <p>Vous pouvez aussi me croiser sous le pseudonyme <code>hex46</code>.</p>
+            <p>Je suis un petit développeur orienté back ayant des appétences pour l'univers Java et JavaScript.
+            Il m'arrive aussi de tester des souris et claviers étranges. </p>
+        </div>
+        <img src="{{ metadata.avatar }}" alt="Mon avatar."/>
     </div>
-    <h2>Développeur</h2>
+    <div class="lastPost">
+        <span class="lastPostTitle">Dernier article :</span>
+        <div class="post">
+            Arrive bientôt...
+        </div>
+    </div>
 </main>
 {% endblock %}

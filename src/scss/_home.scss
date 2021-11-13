@@ -1,0 +1,48 @@
+.home {
+    img {
+        display: block;
+        border-radius: 175px;
+        height: 275px;
+        width: 233px;
+        margin: auto;
+
+        @media (min-width: 900px) {
+            height: 360px;
+            width: 300px;
+        } 
+    }
+
+    @media (min-height: 800px) {
+        @include flex-column;
+        justify-content: space-evenly;
+    } 
+
+    @media (min-width: 800px) {
+       p {
+           width: 450px;
+       }
+    }
+
+    @media (min-width: 900px) {
+        width: 800px;
+        margin: auto;
+    }
+}
+
+.presentation {
+    @media (min-width: 800px) {
+        @include flex-row;
+        align-items: center;
+    }
+}
+
+.lastPost {
+    margin-top: 3em;
+
+    @media (min-width: 800px) {
+        margin-top: 1em;
+    } 
+    .dates, .tags {
+        font-weight: lighter;
+    }
+}

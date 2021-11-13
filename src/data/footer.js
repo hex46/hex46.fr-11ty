@@ -1,12 +1,6 @@
 module.exports = {
     "links": [
         {
-            "label": "À propos",
-            "url": "about.html",
-            "rel": "noreferrer",
-            "accesskey": "a"
-        },
-        {
             "label": "Twitter",
             "url": "https://twitter.com/hex46_",
             "target": "_blank",

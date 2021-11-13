@@ -11,16 +11,18 @@ Les sources du site sont disponibles sur [GitLab](https://gitlab.com/hex46/hex46
 
 ### Me concernant
 
-Je m'appelle Florent, mais vous me croiserez plus souvent sous le pseudo `hex46`.  Je suis un petit développeur orienté back ayant des appétences pour Java et JavaScript (et un peu Rust & Python).  
-Mon PC personnel est sur [Fedora](https://getfedora.org/), mais je ne suis pas à l'abri de retomber dans le "distro-hopping". J'utilise souvent [Sway](https://swaywm.org/) ou [Gnome](https://www.gnome.org/) comme gestionnaire de fenêtres/environnement de bureau.
+Je m'appelle Florent A., mais vous me croiserez plus souvent sous le pseudo `hex46`.  Je suis un petit développeur orienté back ayant des appétences pour Java et JavaScript (et un peu Rust & Python).  
+Mon PC personnel est sur [Fedora](https://getfedora.org/), mais je ne suis pas à l'abri de retomber dans le "distro-hopping" (coucou [ArchLinux](https://archlinux.org/)).
 
 Pour me connaître, le mieux est peut-être de me contacter sur les réseaux ;).
 
 ### Crédits
-- Site réalisé avec [11ty](https://11ty.dev) ;
-- Une partie du travail est délégué à [NodeJS](https://nodejs.org/en/) ;
-- Quelques heures sur [VSCode](https://github.com/microsoft/vscode) et [Figma](https://www.figma.com) ont été nécessaires ;
-- L'image utilisée pour indiquer les liens externes vient de [remixicon](https://remixicon.com).
+- Site réalisé avec [11ty](https://11ty.dev)
+- Une partie du travail est délégué à [NodeJS](https://nodejs.org/en/)
+- Quelques heures sur [VSCode](https://github.com/microsoft/vscode) et [Figma](https://www.figma.com) ont été nécessaires
+- Il y a un peu de [SASS](https://sass-lang.com/) (pour la syntaxe et la transpilation) et [PostCSS](https://postcss.org/) ainsi que quelques plugins sont utilisés pour la génération des styles
+- L'image utilisée pour indiquer les liens externes vient de [remixicon](https://remixicon.com)
+- Le palette de couleurs du site est une variante de [Nord](https://www.nordtheme.com/)
 
 ## Mentions légales
 ___

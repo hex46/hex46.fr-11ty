@@ -1,0 +1,39 @@
+header {
+    margin: 2em 0 4em 0;
+}
+
+nav {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 350px;
+    margin: auto;
+
+    @media (min-width: 600px) {
+        align-items: center;
+        max-width: 500px;
+        margin: initial;
+    }
+
+    a {
+        padding: 0.25em 0;
+    }
+}
+
+#logo-home {
+    @include flex-column;
+    align-items: center;    
+    width: 100%;
+    margin-bottom: 0.75em;
+
+    @media (min-width: 600px) {
+        @include flex-row;
+        align-items: center;
+        margin-bottom: inherit;
+        width: auto;
+
+        img {
+            padding-right: 0.75em;
+        }
+    }
+}
