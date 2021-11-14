@@ -8,9 +8,10 @@ module.exports = function(eleventyConfig) {
     // Project architecture
     const dir = {
         input: "src",
-        includes: "include",
+        includes: "includes",
         data: "data", // default value
-        output: "output" // default value
+        output: "output", // default value
+        posts: "posts"
     }
 
     // Configuration
@@ -33,6 +34,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget(`${dir.input}/scss/`);
     eleventyConfig.addWatchTarget(`${dir.input}/js/`);
     eleventyConfig.addWatchTarget(`${dir.input}/img/`);
+
+    // Get all elements in /posts
+    // I don't use tags because I want to use it for taxonomies
+    eleventyConfig.addCollection("posts", function (collection) {
+        return collection.getFilteredByGlob(`./${dir.input}/${dir.posts}/**/*.md`);
+    });
 
     // Markdown configuration
     // Src : https://github.com/11ty/eleventy/issues/563

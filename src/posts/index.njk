@@ -1,0 +1,16 @@
+---
+pagination:
+  data: collections.posts
+  size: 4
+  alias: posts
+permalink: articles.html
+---
+{% extends "base.njk" %}
+{% block main %}
+<main>
+    <h1>Articles</h1>
+    {% for post in posts %}
+        {% include "post.njk" %}
+    {% endfor %}
+</main>
+{% endblock %}

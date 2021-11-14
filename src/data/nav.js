@@ -13,7 +13,7 @@ module.exports = [
     },
     {
         "id": "home-link",
-        "label": "/home",
+        "label": "/accueil",
         "url": "/",
         "target": "_self",
         "accesskey": "h"
@@ -21,7 +21,7 @@ module.exports = [
     {
         "id": "articles-link",
         "label": "/articles",
-        "url": "/posts.html",
+        "url": "/articles.html",
         "target": "_self",
         "accesskey": "a"
     },
@@ -35,7 +35,7 @@ module.exports = [
     {
         "id": "about-link",
         "label": "/à propos",
-        "url": "/about.html",
+        "url": "/a-propos.html",
         "target": "_self",
         "accesskey": "p"
     }

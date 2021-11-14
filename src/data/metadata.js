@@ -1,6 +1,3 @@
-const generateHash = require('../lib/generateHash');
-const cssFileName = "styles.css";
-
 module.exports = {
     "home": "https://hex46.fr",
     "title": "hex46 - Développeur",

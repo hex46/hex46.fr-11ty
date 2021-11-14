@@ -3,7 +3,7 @@ const path = require('path');
 const sass = require('sass');
 const postcss = require('postcss');
 
-const generateHash = require('../lib/generateHash');
+const generateHash = require('../libs/generateHash');
 
 module.exports = class SCSSBuild {
 
