@@ -3,31 +3,44 @@ const path = require('path');
 const sass = require('sass');
 const postcss = require('postcss');
 
-module.exports = class {
-  async data() {
-    const scssDir = path.join(__dirname, '.');
-    const rawFilepath = path.join(scssDir, 'styles.scss');
+const generateHash = require('../lib/generateHash');
 
-    return {
-      permalink: `css/styles.css`,
-      rawFilepath,
-      rawScss: fs.readFileSync(rawFilepath),
-      scssDir: scssDir
-    };
-  }
+module.exports = class SCSSBuild {
 
-  async render({ scssDir, rawFilepath }) {
-    var sassRenderResult = sass.renderSync({
-      file: rawFilepath,
-      includePaths: [scssDir],
-    });
-    
-    const rawCss = sassRenderResult.css.toString();
+    // Cache raw CSS & output path
+    static rawCss;
+    static permalink;
 
-    return await postcss([
-        require('autoprefixer'),
-        require('cssnano')])
-      .process(rawCss)
-      .then((result) => result.css);
-  }
+    data() {
+        if (!SCSSBuild.rawCss || !SCSSBuild.permalink) {
+            const scssDir = path.join(__dirname, '.');
+            const rawFilepath = path.join(scssDir, 'styles.scss');
+
+            SCSSBuild.rawCss = this.sassRender(rawFilepath, scssDir);
+            const hash = generateHash('styles', SCSSBuild.rawCss);
+            SCSSBuild.permalink = `css/styles.${hash}.css`;
+        }
+
+        return {
+            permalink: SCSSBuild.permalink,
+            rawCss: SCSSBuild.rawCss
+        };
+    }
+
+    sassRender(rawFilepath, scssDir) {
+        var sassRenderResult = sass.renderSync({
+            file: rawFilepath,
+            includePaths: [scssDir],
+        });
+
+        return sassRenderResult.css.toString();
+    }
+
+    async render({ rawCss }) {    
+        return await postcss([
+            require('autoprefixer'),
+            require('cssnano')])
+        .process(rawCss)
+        .then((result) => result.css);
+    }
 };
