@@ -41,6 +41,16 @@ module.exports = function(eleventyConfig) {
         return collection.getFilteredByGlob(`./${dir.input}/${dir.posts}/**/*.md`);
     });
 
+    // Filters
+    eleventyConfig.addFilter("localdate", function(value) {
+        const date = new Date(value);
+        return date.toLocaleString('fr-FR', { day: 'numeric', month: 'numeric', year: 'numeric' });
+    });
+
+    eleventyConfig.addFilter("limit", function(array, limit) {
+        return array.slice(0, limit);
+    });
+
     // Markdown configuration
     // Src : https://github.com/11ty/eleventy/issues/563
     const markdownItOptions = {

@@ -9,8 +9,12 @@ permalink: articles.html
 {% block main %}
 <main>
     <h1>Articles</h1>
-    {% for post in posts %}
-        {% include "post.njk" %}
-    {% endfor %}
+    {% if posts.length > 0 %}
+        {% for post in posts | reverse %}
+            {% include "post.njk" %}
+        {% endfor %}
+    {% else %}
+        Coming soon...
+    {% endif %}
 </main>
 {% endblock %}

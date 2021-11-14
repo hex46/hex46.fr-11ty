@@ -18,9 +18,11 @@
     } 
 
     @media (min-width: 800px) {
-       p {
-           width: 450px;
-       }
+        .presentation {
+            p {
+                width: 450px;
+            }
+        }
     }
 
     @media (min-width: 900px) {
@@ -45,4 +47,10 @@
     .dates, .tags {
         font-weight: lighter;
     }
+}
+
+.lastPostTitle {
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
 }

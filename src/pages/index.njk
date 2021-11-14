@@ -12,8 +12,13 @@
     </div>
     <div class="lastPost">
         <span class="lastPostTitle">Dernier article :</span>
-        <div class="post">
-        </div>
+            {% if collections.posts.length > 0 %}
+                {% for post in collections.posts | reverse | limit(1) %}
+                    {% include "post.njk" %}
+                {% endfor %}
+            {% else %}
+                Coming soon...
+            {% endif %}
     </div>
 </main>
 {% endblock %}
