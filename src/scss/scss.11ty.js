@@ -18,7 +18,7 @@ module.exports = class SCSSBuild {
 
             SCSSBuild.rawCss = this.sassRender(rawFilepath, scssDir);
             const hash = generateHash('styles', SCSSBuild.rawCss);
-            SCSSBuild.permalink = `css/styles.${hash}.css`;
+            SCSSBuild.permalink = `/css/styles.${hash}.css`;
         }
 
         return {

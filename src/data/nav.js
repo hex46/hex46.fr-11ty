@@ -5,7 +5,7 @@ module.exports = [
         "url": "/",
         "target": "_self",
         "img": {
-            "path": "img/logo-mini.png",
+            "path": "/img/logo-mini.png",
             "alt": "Logo cliquable", 
             "width": "44",
             "height": "50"
