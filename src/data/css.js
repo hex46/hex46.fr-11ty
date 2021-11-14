@@ -1,8 +1,8 @@
 const SCSSBuild = require('../scss/scss.11ty');
 
-const scssBuildInstance = new SCSSBuild();
-const permalink = scssBuildInstance.data().permalink;
+module.exports = async function() {
+    const scssBuildInstance = new SCSSBuild();
+    const data = scssBuildInstance.data();
 
-module.exports = {
-    permalink: permalink
+    return data;  
 }

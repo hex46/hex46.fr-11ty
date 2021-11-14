@@ -11,7 +11,7 @@ module.exports = class SCSSBuild {
     static rawCss;
     static permalink;
 
-    data() {
+    async data() {
         if (!SCSSBuild.rawCss || !SCSSBuild.permalink) {
             const scssDir = path.join(__dirname, '.');
             const rawFilepath = path.join(scssDir, 'styles.scss');
