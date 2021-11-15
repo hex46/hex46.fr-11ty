@@ -6,12 +6,12 @@ nav {
     @include flex-row;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 350px;
+    max-width: 250px;
     margin: auto;
 
     @media (min-width: 600px) {
         align-items: center;
-        max-width: 500px;
+        max-width: 400px;
         margin: initial;
     }
 

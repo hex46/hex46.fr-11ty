@@ -29,6 +29,10 @@
         width: 800px;
         margin: auto;
     }
+
+    @media (min-width: 2000px) {
+        width: 1100px;
+    }
 }
 
 .presentation {

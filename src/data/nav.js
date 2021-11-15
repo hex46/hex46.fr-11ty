@@ -12,29 +12,22 @@ module.exports = [
         }
     },
     {
-        "id": "home-link",
-        "label": "/accueil",
-        "url": "/",
-        "target": "_self",
-        "accesskey": "h"
-    },
-    {
         "id": "articles-link",
-        "label": "/articles",
+        "label": "Articles",
         "url": "/articles.html",
         "target": "_self",
         "accesskey": "a"
     },
     {
         "id": "tags-link",
-        "label": "/tags",
+        "label": "Tags",
         "url": "/tags.html",
         "target": "_self",
         "accesskey": "t"
     },
     {
         "id": "about-link",
-        "label": "/à propos",
+        "label": "À propos",
         "url": "/a-propos.html",
         "target": "_self",
         "accesskey": "p"
