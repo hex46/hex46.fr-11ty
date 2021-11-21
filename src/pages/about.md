@@ -20,6 +20,7 @@ Pour me connaître, le mieux est peut-être de me contacter sur les réseaux ;).
 - Il y a un peu de [SASS](https://sass-lang.com/) (pour la syntaxe et la transpilation) et [PostCSS](https://postcss.org/) ainsi que quelques plugins sont utilisés pour la génération des styles
 - L'image utilisée pour indiquer les liens externes vient de [remixicon](https://remixicon.com)
 - Le palette de couleurs du site est une variante de [Nord](https://www.nordtheme.com/)
+- La palette de couleur utilisée pour le code visible dans les articles utilisent le plugin [Syntax Highlighting Plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/) basé sur [Prism](https://github.com/PrismJS/prism) et le thème est [Prism-Nord](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-nord.css). 
 
 --- 
 
