@@ -2,7 +2,10 @@ const fs = require('fs')
 const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
 const mila = require("markdown-it-link-attributes");
+
+// Plugins 11ty
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
 
@@ -120,6 +123,7 @@ module.exports = function(eleventyConfig) {
 
     // Plugins
     eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     return config;
 };

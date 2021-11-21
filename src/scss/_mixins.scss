@@ -30,6 +30,10 @@
         border-radius: 5px;
         text-decoration: none;
     }
+
+    code, pre {
+        background-color: darken($background-color, 5);
+    }
 }
 
 @mixin a-hover-color($color) {
