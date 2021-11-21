@@ -12,14 +12,12 @@ module.exports = class SCSSBuild {
     static permalink;
 
     async data() {
-        if (!SCSSBuild.rawCss || !SCSSBuild.permalink) {
-            const scssDir = path.join(__dirname, '.');
-            const rawFilepath = path.join(scssDir, 'styles.scss');
+        const scssDir = path.join(__dirname, '.');
+        const rawFilepath = path.join(scssDir, 'styles.scss');
 
-            SCSSBuild.rawCss = this.sassRender(rawFilepath, scssDir);
-            const hash = generateHash('styles', SCSSBuild.rawCss);
-            SCSSBuild.permalink = `/css/styles.${hash}.css`;
-        }
+        SCSSBuild.rawCss = this.sassRender(rawFilepath, scssDir);
+        const hash = generateHash('styles', SCSSBuild.rawCss);
+        SCSSBuild.permalink = `/css/styles.${hash}.css`;
 
         return {
             permalink: SCSSBuild.permalink,

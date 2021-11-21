@@ -1,0 +1,17 @@
+---
+title: Liste des tags
+permalink: tags.html
+---
+{% extends "base.njk" %}
+{% block main %}
+<main>
+    <h1>Liste des tags</h1>
+    {% if collections.tagList.length  > 0 %}
+        {% for tag in collections.tagList %}
+            {% include "tag.njk" %}
+        {% endfor %}
+    {% else %}
+        Coming soon...
+    {% endif %}
+</main>
+{% endblock %}

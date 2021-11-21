@@ -1,0 +1,28 @@
+---
+eleventyComputed:
+  title: Tag "{{ tag }}"
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter: 
+    - all
+    - index
+    - postList
+    - tagList
+permalink: /tags/{{ tag }}.html
+---
+{% extends "base.njk" %}
+{% block main %}
+<main>
+    <h1>Tag : {{ tag }}</h1>
+    {% set postList = collections.postList | byTag(tag) %}
+    {% if postList.length > 0 %}
+        {% for post in postList | reverse %}
+            {% include "article.njk" %}
+        {% endfor %}
+    {% else %}
+        Coming soon...
+    {% endif %}
+</main>
+{% endblock %}

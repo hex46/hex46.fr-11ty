@@ -2,6 +2,7 @@ const fs = require('fs')
 const htmlmin = require("html-minifier");
 const markdownIt = require("markdown-it");
 const mila = require("markdown-it-link-attributes");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
 
@@ -11,7 +12,7 @@ module.exports = function(eleventyConfig) {
         includes: "includes",
         data: "data", // default value
         output: "output", // default value
-        posts: "posts"
+        posts: "pages/posts"
     }
 
     // Configuration
@@ -37,8 +38,20 @@ module.exports = function(eleventyConfig) {
 
     // Get all elements in /posts
     // I don't use tags because I want to use it for taxonomies
-    eleventyConfig.addCollection("posts", function (collection) {
+    eleventyConfig.addCollection("postList", function (collection) {
         return collection.getFilteredByGlob(`./${dir.input}/${dir.posts}/**/*.md`);
+    });
+    
+    // Tags list
+    // Src: https://github.com/11ty/eleventy-base-blog/blob/master/.eleventy.js
+    eleventyConfig.addCollection("tagList", function (collection) {
+        let tagSet = new Set();
+
+        collection.getAll().forEach(item => {
+            (item.data.tags || []).forEach(tag => tagSet.add(tag));
+        });
+
+        return [...tagSet].sort();
     });
 
     // Filters
@@ -46,9 +59,15 @@ module.exports = function(eleventyConfig) {
         const date = new Date(value);
         return date.toLocaleString('fr-FR', { day: 'numeric', month: 'numeric', year: 'numeric' });
     });
-
     eleventyConfig.addFilter("limit", function(array, limit) {
         return array.slice(0, limit);
+    });
+    eleventyConfig.addFilter("byTag", function(postList, tag) {
+        let filteredArray = (postList || []).filter(post => {
+            const tags = (post.data.tags || []);
+            return tags.includes(tag);
+        });
+        return filteredArray; 
     });
 
     // Markdown configuration
@@ -98,6 +117,9 @@ module.exports = function(eleventyConfig) {
         }    
         return content;
     });
+
+    // Plugins
+    eleventyConfig.addPlugin(pluginRss);
 
     return config;
 };

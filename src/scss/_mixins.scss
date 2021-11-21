@@ -19,7 +19,7 @@
     }
 
     article {
-        border-left: 15px solid $border-post-color;
+        border-left: 7px solid $border-post-color;
         padding-left: 1em;
     }
 
@@ -28,6 +28,7 @@
         color: $text-color;
         background-color: $border-post-color;
         border-radius: 5px;
+        text-decoration: none;
     }
 }
 

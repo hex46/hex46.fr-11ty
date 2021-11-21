@@ -1,0 +1,12 @@
+---
+title: Articles
+permalink: articles.html
+layout: page.njk
+---
+{% if collections.postList.length > 0 %}
+    {% for post in collections.postList | reverse %}
+        {% include "article.njk" %}
+    {% endfor %}
+{% else %}
+    Coming soon...
+{% endif %}

@@ -9,7 +9,7 @@
     <div class="metadata">
         <span>Tag(s) : </span>
         {% for tag in post.data.tags %}
-            <span class="tag">{{ tag }}</span>
+            {% include "tag.njk" %}    
         {% endfor %}
     </div>  
     <p>{{ post.data.description }}</p>
