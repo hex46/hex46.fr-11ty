@@ -1,0 +1,12 @@
+<div class="metadata">
+    <span>Créé le {{ page.date | localdate }}</span>
+    {% if modified %}
+    - <span>Modifié le {{ page.modified | localdate }}</span>
+    {% endif %} 
+</div>
+<div class="metadata">
+    <span>Tag(s) : </span>
+    {% for tag in tags %}
+        {% include "tag.njk" %}    
+    {% endfor %}
+</div>

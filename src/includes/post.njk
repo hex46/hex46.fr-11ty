@@ -1,0 +1,12 @@
+{% extends "base.njk" %}
+{% block main %}
+<main>
+    <h1>{{ title }}</h1>
+    {% set created = page.date %}
+    {% set modified = page.modified %}
+    {% set tags = page.tags %}
+    {% include "post-metadata.njk" %}
+    
+    {{ content | safe }}
+</main>
+{% endblock %}

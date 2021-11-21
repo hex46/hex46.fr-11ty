@@ -14,7 +14,7 @@
         <span class="lastPostTitle">Dernier article :</span>
             {% if collections.postList.length > 0 %}
                 {% for post in collections.postList | reverse | limit(1) %}
-                    {% include "article.njk" %}
+                    {% include "post-summary.njk" %}
                 {% endfor %}
             {% else %}
                 Coming soon...

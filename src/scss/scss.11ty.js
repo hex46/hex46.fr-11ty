@@ -3,25 +3,21 @@ const path = require('path');
 const sass = require('sass');
 const postcss = require('postcss');
 
-const generateHash = require('../libs/generateHash');
+const generateHash = require('../libs/generate-hash');
 
 module.exports = class SCSSBuild {
-
-    // Cache raw CSS & output path
-    static rawCss;
-    static permalink;
 
     async data() {
         const scssDir = path.join(__dirname, '.');
         const rawFilepath = path.join(scssDir, 'styles.scss');
 
-        SCSSBuild.rawCss = this.sassRender(rawFilepath, scssDir);
-        const hash = generateHash('styles', SCSSBuild.rawCss);
-        SCSSBuild.permalink = `/css/styles.${hash}.css`;
+        const rawCss = this.sassRender(rawFilepath, scssDir);
+        const hash = generateHash('styles', rawCss);
+        const permalink = `/css/styles.${hash}.css`;
 
         return {
-            permalink: SCSSBuild.permalink,
-            rawCss: SCSSBuild.rawCss
+            permalink: permalink,
+            rawCss: rawCss
         };
     }
 

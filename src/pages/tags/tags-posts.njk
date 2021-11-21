@@ -19,7 +19,7 @@ permalink: /tags/{{ tag }}.html
     {% set postList = collections.postList | byTag(tag) %}
     {% if postList.length > 0 %}
         {% for post in postList | reverse %}
-            {% include "article.njk" %}
+            {% include "post-summary.njk" %}
         {% endfor %}
     {% else %}
         Coming soon...
