@@ -4,9 +4,11 @@
     - <span>Modifié le {{ page.modified | localdate }}</span>
     {% endif %} 
 </div>
+{% if tags|length %}
 <div class="metadata">
     <span>Tag(s) : </span>
     {% for tag in tags %}
         {% include "tag.njk" %}    
     {% endfor %}
 </div>
+{% endif %}
