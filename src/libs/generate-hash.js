@@ -5,26 +5,16 @@
  */
 const crypto = require('crypto');
 
-const cacheMap = new Map(); // Cache
-
-function generateHash(key, rawfile) {
-    checkParameters(key, rawfile);
-
-    // Cache
-    let hash = cacheMap.get(key);
-    if (hash) return hash;
-
-    hash = getHash(rawfile);
-    cacheMap.set(key, hash);
-
-    return hash;
+function generateHash(rawfile) {
+    checkParameters(rawfile);
+    return getHash(rawfile);
 }
 
-function checkParameters(key, rawfile) {
-    if (!key || !rawfile)
+function checkParameters(rawfile) {
+    if (!rawfile)
         throw new Error('Error: some parameters are empty');
 
-    if(key.length === 0 || rawfile.length === 0 )
+    if(rawfile.length === 0 )
         throw new Error('Error: some parameters are blank');
 }
 
