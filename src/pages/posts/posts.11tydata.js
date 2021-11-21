@@ -1,3 +1,4 @@
 module.exports = {
-    permalink: "posts/{{title | slug}}/"
+    permalink: "posts/{{title | slug}}/",
+    layout: "post.njk"
 };
