@@ -14,21 +14,21 @@ module.exports = [
     {
         "id": "articles-link",
         "label": "Articles",
-        "url": "/articles.html",
+        "url": "/posts/",
         "target": "_self",
         "accesskey": "a"
     },
     {
         "id": "tags-link",
         "label": "Tags",
-        "url": "/tags.html",
+        "url": "/tags/",
         "target": "_self",
         "accesskey": "t"
     },
     {
         "id": "about-link",
         "label": "À propos",
-        "url": "/a-propos.html",
+        "url": "/a-propos/",
         "target": "_self",
         "accesskey": "p"
     }

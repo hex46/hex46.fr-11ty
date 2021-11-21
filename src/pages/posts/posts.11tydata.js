@@ -1,3 +1,3 @@
 module.exports = {
-    permalink: "articles/{{title | slug}}.html"
+    permalink: "posts/{{title | slug}}/"
 };

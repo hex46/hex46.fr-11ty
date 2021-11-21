@@ -1,7 +1,7 @@
 ---
 layout: page.njk
 title: À propos
-permalink: a-propos.html
+permalink: a-propos/
 ---
 
 ## Me concernant
