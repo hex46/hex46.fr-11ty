@@ -6,7 +6,7 @@ const postcss = require('postcss');
 const generateHash = require('../libs/generate-hash');
 const isProduction = require('../libs/is-production');
 
-module.exports = class SCSSBuild {
+module.exports = class {
 
     async data() {
         const scssDir = path.join(__dirname, '.');
