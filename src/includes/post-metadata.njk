@@ -1,7 +1,7 @@
 <div class="metadata">
-    <span>Créé le {{ page.date | localdate }}</span>
+    <span>Créé le {{ created | localdate }}</span>
     {% if modified %}
-    - <span>Modifié le {{ page.modified | localdate }}</span>
+    - <span>Modifié le {{ modified | localdate }}</span>
     {% endif %} 
 </div>
 {% if tags|length %}
