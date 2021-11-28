@@ -1,11 +1,11 @@
 html {
-    @include sizeHW(100%, 100%);
+    @include sizeHW(100%, 100vw);
     @include normalize-mp;
     @include theme($light-text-color, $light-background-color, $light-link-color);
-
     font-family: Inter, sans-serif;
     line-height: 1.5;
-    
+    overflow-x: hidden;
+
     &.dark {
       @include theme($dark-text-color, $dark-background-color, $dark-link-color);
     }
@@ -36,11 +36,10 @@ a[href^="http"]::after {
     vertical-align: sub;
     padding-left: 0.1em;
 
- 
     @include sizeHW(1em, 1em);
 }
 
-hr { 
+hr {
     color: #4c566a;
 }
 
@@ -49,5 +48,5 @@ code {
 }
 
 pre {
-    padding: 1em 1em;    
+    padding: 1em 1em;
 }

@@ -54,10 +54,10 @@
 
 @mixin sizeHW($height, $width) {
     height: $height;
-    width: $width;    
+    width: $width;
 }
 
-@mixin container {    
+@mixin container {
     @include sizeHW(100%, 85%);
     margin: auto;
 

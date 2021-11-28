@@ -9,13 +9,13 @@
         @media (min-width: 900px) {
             height: 360px;
             width: 300px;
-        } 
+        }
     }
 
     @media (min-height: 800px) {
         @include flex-column;
         justify-content: space-evenly;
-    } 
+    }
 
     @media (min-width: 800px) {
         .presentation {
@@ -47,7 +47,7 @@
 
     @media (min-width: 800px) {
         margin-top: 1em;
-    } 
+    }
     .dates, .tags {
         font-weight: lighter;
     }
