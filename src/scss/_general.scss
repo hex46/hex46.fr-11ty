@@ -43,10 +43,6 @@ hr {
     color: #4c566a;
 }
 
-code {
+code:not([class^="lang"]) {
     padding: 0.1em 0.25em;
-}
-
-pre {
-    padding: 1em 1em;
 }

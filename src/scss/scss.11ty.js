@@ -32,7 +32,7 @@ module.exports = class {
     }
 
     async render({ rawCss }) {
-        
+
         let postcssPlugin = []
         if (isProduction())
             postcssPlugin = [require('autoprefixer'), require('cssnano')];

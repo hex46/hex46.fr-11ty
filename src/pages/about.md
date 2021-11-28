@@ -11,7 +11,6 @@ Mon PC personnel est sur [Fedora](https://getfedora.org/), mais je ne suis pas �
 
 Pour me connaître, le mieux est peut-être de me contacter sur les réseaux ;).
 
----
 
 ## Crédits
 - Site réalisé avec [11ty](https://11ty.dev)
@@ -22,7 +21,6 @@ Pour me connaître, le mieux est peut-être de me contacter sur les réseaux ;).
 - Le palette de couleurs du site est une variante de [Nord](https://www.nordtheme.com/)
 - La palette de couleur utilisée pour le code visible dans les articles utilisent le plugin [Syntax Highlighting Plugin](https://www.11ty.dev/docs/plugins/syntaxhighlight/) basé sur [Prism](https://github.com/PrismJS/prism) et le thème est [Prism-Nord](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-nord.css)
 
---- 
 
 ## Mentions légales
 

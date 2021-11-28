@@ -13,6 +13,12 @@ article {
     font-weight: 300;
 }
 
-main > .metadata:nth-child(3) {
-    margin-bottom: 1.75em;
+main {
+    & > .metadata:nth-child(3) {
+        margin-bottom: 1.75em;
+    }
+
+    & > h2 {
+        margin-top: 2em;
+    }
 }

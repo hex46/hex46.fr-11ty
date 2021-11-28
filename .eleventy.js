@@ -44,7 +44,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("postList", function (collection) {
         return collection.getFilteredByGlob(`./${dir.input}/${dir.posts}/**/*.md`);
     });
-    
+
     // Tags list
     // Src: https://github.com/11ty/eleventy-base-blog/blob/master/.eleventy.js
     eleventyConfig.addCollection("tagList", function (collection) {
