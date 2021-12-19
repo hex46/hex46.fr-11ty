@@ -7,6 +7,9 @@ const mila = require("markdown-it-link-attributes");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
+// Custom
+const imageShortcode = require("./src/libs/image-shortcode");
+
 module.exports = function(eleventyConfig) {
 
     // Project architecture
@@ -70,7 +73,7 @@ module.exports = function(eleventyConfig) {
             const tags = (post.data.tags || []);
             return tags.includes(tag);
         });
-        return filteredArray; 
+        return filteredArray;
     });
 
     // Markdown configuration
@@ -89,12 +92,12 @@ module.exports = function(eleventyConfig) {
 
     let markdownLib = markdownIt(markdownItOptions).use(mila, milaOptions);
     eleventyConfig.setLibrary("md", markdownLib);
-  
+
     // 404
     // src : https://www.11ty.dev/docs/quicktips/not-found/
     eleventyConfig.setBrowserSyncConfig({
         callbacks: {
-          ready: function(err, bs) {    
+          ready: function(err, bs) {
             bs.addMiddleware("*", (req, res) => {
               const content_404 = fs.readFileSync(`${dir.output}/404/index.html`);
               // Add 404 http status code in request header.
@@ -117,13 +120,19 @@ module.exports = function(eleventyConfig) {
             collapseWhitespace: true
           });
           return minified;
-        }    
+        }
         return content;
     });
 
     // Plugins
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(syntaxHighlight);
+
+    // Shortcode
+    // Note : Markdown files are pre-processed as Liquid templates by default.
+    // src : https://www.11ty.dev/docs/shortcodes/#shortcodes
+    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode(dir));
+    eleventyConfig.addLiquidShortcode("image", imageShortcode(dir));
 
     return config;
 };

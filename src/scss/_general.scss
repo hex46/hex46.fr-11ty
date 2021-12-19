@@ -46,3 +46,9 @@ hr {
 code:not([class^="lang"]) {
     padding: 0.1em 0.25em;
 }
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

@@ -5,7 +5,7 @@
  */
 const crypto = require('crypto');
 
-function generateHash(rawfile) {
+module.exports = function generateHash(rawfile) {
     checkParameters(rawfile);
     return getHash(rawfile);
 }
@@ -23,5 +23,3 @@ function getHash(rawfile) {
     const hash = hmacResult.update(rawfile);
     return hash.digest('hex');
 }
-
-module.exports = generateHash;
