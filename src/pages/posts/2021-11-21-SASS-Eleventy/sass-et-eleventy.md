@@ -4,7 +4,8 @@ description: Comment intégrer SASS dans un site 11ty sans utiliser un gestionna
 tags:
     - 11ty
     - sass
-created: 2021-11-28
+created: 2021-11-21
+published: 2021-11-28
 ---
 
 ## Introduction

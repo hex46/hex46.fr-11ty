@@ -2,7 +2,7 @@
 {% block main %}
 <main>
     <h1>{{ title }}</h1>
-    {% set created = page.data.created %}
+    {% set published = page.data.published %}
     {% set modified = page.data.modified %}
     {% set tags = page.tags %}
     {% include "post-metadata.njk" %}
